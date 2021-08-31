@@ -18,7 +18,7 @@ Automation example for GSL (https://github.com/imatix/gsl)
 
 # Usage
 
-![Usage animated gif](usage.gif)
+![Usage animated gif](usageguide.gif)
 
 ## Writing a model 
 
