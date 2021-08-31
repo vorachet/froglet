@@ -1,6 +1,6 @@
 # FROGLET
 
-Automation example for GSL (https://github.com/imatix/gsl)
+Automation workflow for GSL (https://github.com/imatix/gsl)
 
 ## Fixed directory names
 
