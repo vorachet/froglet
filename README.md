@@ -1,12 +1,35 @@
 # FROGLET
 
-```
-gsl -a -script:<GSL_FILE_NAME> <XML_MODEL_FILE_PATH>  <OUTPUT_FOLDER>
-```
+Automation example for GSL (https://github.com/imatix/gsl)
 
-Example 
+## Fixed directory names
 
 ```
-cd generators
-gsl -a -script:js_helloworld ../composers/js_program.xml  $(PWD)/../out
+.
+├── README.md
+├── froglet.sh                  # Froglet script used to execute genrators
+├── generators                  # fixed folder name for storing genrators
+│   └── js_helloworld
+│       ├── index.gsl
+│       └── program.gsl
+├── models                      # fixed folder name for storing models
+│   └── my_helloworld.xml
 ```
+
+# Usage
+
+![Usage animated gif](usage.gif)
+
+## Writing a model 
+
+Put your GSL models in models folder.
+
+## Writing a generator
+
+Generator term with this project is a collection of GSL templates saved in one folder for generating specific artifacts. 
+
+Each generator will be a command with Froglet that work with a GSL model file.
+
+## Executing a generation job
+
+The Froglet script provides you a workflow to execute a generation job. Each job will require one model and one generator. 
