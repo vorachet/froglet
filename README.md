@@ -33,3 +33,16 @@ Each generator will be a command with Froglet that work with a GSL model file.
 ## Executing a generation job
 
 The Froglet script provides you a workflow to execute a generation job. Each job will require one model and one generator. 
+
+# Testing 
+
+## Test woth user-defined config file
+```
+./froglet.sh test_userdefined_config_file
+```
+
+# Test with defailt config file
+
+```
+run_sample_setup_config_file.sh
+```
