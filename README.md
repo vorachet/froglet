@@ -7,7 +7,7 @@ Automation workflow for GSL (https://github.com/imatix/gsl)
 ```
 .
 ├── README.md
-├── froglet.sh                  # Froglet script used to execute genrators
+├── froglet.sh                  # Froglet script provides you the workflow
 ├── generators                  # fixed folder name for storing genrators
 │   └── js_helloworld
 │       ├── index.gsl
