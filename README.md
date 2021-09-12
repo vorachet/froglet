@@ -1,4 +1,4 @@
-# FROGLET
+# FROGLET v0.2
 
 FROGLET is an automation workflow for GSL (https://github.com/imatix/gsl)
 
