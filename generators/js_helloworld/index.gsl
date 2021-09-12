@@ -1,5 +1,0 @@
-.template 0
-for program
-    include "program.gsl"
-endfor 
-.endtemplate

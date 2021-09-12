@@ -1,0 +1,5 @@
+.template 0
+for graph
+    include "graph.gsl"
+endfor 
+.endtemplate

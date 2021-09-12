@@ -1,0 +1,10 @@
+.template 1
+.ignorecase = 0
+.output "$(switches.arg1)/$(switches.arg2).dot"
+digraph D {
+.for edge
+   $(source) -> $(target)
+.endfor
+}
+.echo "Generated $(switches.arg1)/$(switches.arg2).dot"
+.endtemplate

@@ -3,15 +3,22 @@
 Automation workflow for GSL (https://github.com/imatix/gsl)
 
 
-# Installation 
+# Install Froglet 
 
 ```
-brew tab https://github.com/vorachet/froglet
+brew tab vorachet/froglet
 brew install froglet
+```
+
+# Uninstall Froglet 
+
+```
+brew remove froglet
 ```
 
 ## Usage
 
+### froglet
 ```
 $ froglet
 ```
@@ -30,6 +37,14 @@ FROGLET_MODELS_FOLDER=/somwhere/mymodels
 FROGLET_GENERATORS_FOLDER=/somwhere/mygenerators
 FROGLET_OUTPUT_FOLDER=/somwhere/myoutput
 ```
+
+### froglet-set
+
+A CLI used to set the workspace directory 
+```
+$ froglet-set 
+```
+
 
 # Project directory
 

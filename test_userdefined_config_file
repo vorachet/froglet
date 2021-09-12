@@ -1,3 +1,0 @@
-FROGLET_MODELS_FOLDER=$(pwd)/models
-FROGLET_GENERATORS_FOLDER=$(pwd)/generators
-FROGLET_OUTPUT_FOLDER=$(pwd)/out

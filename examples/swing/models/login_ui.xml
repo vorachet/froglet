@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<model>
+    <ui>
+        <row>
+            <input name="username" label="Username" type="text">
+            </input>
+        </row>
+        <row>
+            <input name="password" label="Password" type="password">
+            </input>
+        </row>
+        <row>
+            <button name="login" label="Label">
+            </button>
+        </row>
+    </ui>
+</model>
