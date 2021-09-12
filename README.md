@@ -22,11 +22,14 @@ brew remove froglet
 $ froglet
 ```
 
-# User Project Directory
+# Requried structure for a user project
 
 ```
 ├── MyProject
 │   ├── generators/*.gsl   # GSL template files
-│   ├── models*.xml        # GSL model files
+│   ├── models/*.xml       # GSL model files
 ```
+
+* ```generators``` folder name is required
+* ```models``` folder name is required 
 
