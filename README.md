@@ -10,6 +10,12 @@ brew tab vorachet/froglet
 brew install froglet
 ```
 
+# Update Froglet 
+
+```
+brew reinstall froglet
+```
+
 # Uninstall Froglet 
 
 ```
