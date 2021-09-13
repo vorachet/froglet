@@ -1,5 +1,0 @@
-.template 0
-for ui
-    include "ui.gsl"
-endfor 
-.endtemplate

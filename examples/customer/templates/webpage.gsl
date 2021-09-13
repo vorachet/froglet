@@ -1,0 +1,56 @@
+.template 1
+.ignorecase = 0
+.output "$(switches.arg1)/$(switches.arg2).html"
+.total = 0
+<html>
+<head>
+    <style>
+    body {
+        padding: 50
+    }
+    </style>
+</head>
+<body>
+<table border=1>
+<thead>
+    <tr>
+        <th>name</th>
+        <th>email</th>
+        <th>company</th>
+        <th>address</th>
+    </tr>
+</thead>
+<tbody>
+.for record
+.total = total + 1
+<tr>
+<td>
+.for name
+    $(name)
+.endfor
+</td>
+<td>
+.for email
+    $(email) 
+.endfor
+</td>
+<td>
+.for company
+    $(company) 
+.endfor
+</td>
+<td>
+.for address
+    $(address) 
+.endfor
+</td>
+</tr>
+.endfor
+</tbody>
+</table> 
+
+total = $(total)
+</body>
+</html>
+.echo "Generated $(switches.arg1)/$(switches.arg2).html"
+.endtemplate

@@ -1,13 +1,13 @@
 #!/bin/bash
 # Vorachet Jaroensawas 
 
-VERSION=v0.3
+VERSION=v0.4
 FROGLET_MODELS_FOLDER=$(pwd)/models
-FROGLET_GENERATORS_FOLDER=$(pwd)/generators
+FROGLET_TEMPLATES_FOLDER=$(pwd)/templates
 FROGLET_OUTPUT_FOLDER=$(pwd)/output
 
 printf "\n  FROGLET_MODELS_FOLDER = ${FROGLET_MODELS_FOLDER}"
-printf "\n  FROGLET_GENERATORS_FOLDER = ${FROGLET_GENERATORS_FOLDER}"
+printf "\n  FROGLET_TEMPLATES_FOLDER = ${FROGLET_TEMPLATES_FOLDER}"
 printf "\n  FROGLET_OUTPUT_FOLDER = ${FROGLET_OUTPUT_FOLDER}\n"
 
 exitIfIGslProgramUninstalled() {
@@ -21,16 +21,28 @@ exitIfIGslProgramUninstalled() {
         echo -e "\xE2\x9C\x94  Found GSL at $(which gsl)"
     fi
 }
-exitIfIndexGeneratorUndefined() {
-    GENERATOR_INDEX_FILE=${FROGLET_GENERATORS_FOLDER}/index.gsl
-    if [ ! -f "${GENERATOR_INDEX_FILE}" ]; then
+
+exitIfTemplatesDirUndefined() {
+    if [ ! -d "${FROGLET_TEMPLATES_FOLDER}" ]; then
         echo ""
-        echo "Cannot find Generator Index File"
-        echo "Expected file path = ${GENERATOR_INDEX_FILE}"
+        echo "!!! ERROR Cannot find templates folder"
+        echo "!!! ERROR Expected directory path = ${FROGLET_TEMPLATES_FOLDER}"
         echo ""
         exit
     else
-        echo -e "\xE2\x9C\x94  Found Generator Index File at ${GENERATOR_INDEX_FILE}"
+        echo -e "\xE2\x9C\x94 Found templates directory at ${GENERATOR_INDEX_FILE}"
+    fi
+}
+
+exitIfModelsDirUndefined() {
+    if [ ! -d "${FROGLET_MODELS_FOLDER}" ]; then
+        echo ""
+        echo "!!! ERROR Cannot find models folder"
+        echo "!!! ERROR Expected directory path = ${FROGLET_MODELS_FOLDER}"
+        echo ""
+        exit
+    else
+        echo -e "\xE2\x9C\x94 Found models directory at ${FROGLET_MODELS_FOLDER}"
     fi
 }
 
@@ -38,11 +50,13 @@ echo ""
 
 exitIfIGslProgramUninstalled
 
-exitIfIndexGeneratorUndefined
+exitIfTemplatesDirUndefined
+
+exitIfModelsDirUndefined
 
 printf "\nChoose generator:\n"
 
-cd ${FROGLET_GENERATORS_FOLDER}
+cd ${FROGLET_TEMPLATES_FOLDER}
 select g in * ; do test -n "$g" && break; echo ">>> Invalid Selection"; done
 generator=$g
 
@@ -59,18 +73,18 @@ clear
 echo -e ""
 echo -e ""
 echo -e ""
-echo -e "\xE2\x9C\x94  Target Generator ${FROGLET_GENERATORS_FOLDER}/${generator}"
+echo -e "\xE2\x9C\x94  Target Generator ${FROGLET_TEMPLATES_FOLDER}/${generator}"
 echo -e "\xE2\x9C\x94  Target Model ${FROGLET_MODELS_FOLDER}/${model}"
 echo -e "\xE2\x9C\x94  Target Output Folder ${FROGLET_OUTPUT_FOLDER}"
 
-cd ${FROGLET_GENERATORS_FOLDER}/
+cd ${FROGLET_TEMPLATES_FOLDER}/
 echo -e ""
 echo -e ""
 echo -e "Generating..."
 echo -e ""
 
 model_without_extension=$(echo "$model" | cut -f 1 -d '.')
-gsl -a -p -q -script:index ${FROGLET_MODELS_FOLDER}/$model ${FROGLET_OUTPUT_FOLDER} ${model_without_extension}
+gsl -a -p -q -script:${generator} ${FROGLET_MODELS_FOLDER}/$model ${FROGLET_OUTPUT_FOLDER} ${model_without_extension}
 
 echo -e ""
 echo -e "\xE2\x9C\x94  Done"

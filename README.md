@@ -1,6 +1,6 @@
 # Froglet - Lightweight textual artifact generation environment
 
-Latest version 0.3
+Latest version 0.4
 
 
 ```froglet``` is a command line program that provides an interactive workflow for GSL. GSL is a command line program developed by Matrix and designed to construct textual artfacts. Note that you will have to install ```gsl``` on your computer before using ```froglet```. You can learn more about GSL https://github.com/imatix/gsl 

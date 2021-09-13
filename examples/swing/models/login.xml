@@ -10,7 +10,7 @@
             </input>
         </row>
         <row>
-            <button name="login" label="Label">
+            <button name="login" label="Login">
             </button>
         </row>
     </ui>

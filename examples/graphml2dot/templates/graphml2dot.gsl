@@ -2,8 +2,10 @@
 .ignorecase = 0
 .output "$(switches.arg1)/$(switches.arg2).dot"
 digraph D {
+.for graph
 .for edge
    $(source) -> $(target)
+.endfor
 .endfor
 }
 .echo "Generated $(switches.arg1)/$(switches.arg2).dot"

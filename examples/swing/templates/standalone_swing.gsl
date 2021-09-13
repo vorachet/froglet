@@ -1,13 +1,14 @@
 .template 1
 .ignorecase = 0
 .output "$(switches.arg1)/$(switches.arg2).java"
+.for ui
 import java.awt.*;  
 import javax.swing.*;  
 
 public class $(switches.arg2) {  
    public static void main(String[] args) {  
       JFrame f = new JFrame();
-      f.setLayout (new BoxLayout (BoxLayout.Y_AXIS));  
+      f.setLayout (new FlowLayout ());  
 .for row
 .for input
       JTextField $(name)TextField  = new JTextField("$(label)");          
@@ -18,10 +19,10 @@ public class $(switches.arg2) {
       f.add($(name)Button);
 .endfor
 .endfor
-    
       f.setSize(400,500);  
       f.setVisible(true); 
    }  
 }  
+.endfor
 .echo "Generated $(switches.arg1)/$(switches.arg2).java"
 .endtemplate
