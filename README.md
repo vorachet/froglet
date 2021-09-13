@@ -32,10 +32,10 @@ brew tab vorachet/froglet
 brew install froglet
 ```
 
-Update Froglet 
+Upgrade Froglet to the latest version
 
 ```
-brew reinstall froglet
+brew upgrade froglet
 ```
 
 Uninstall Froglet 
