@@ -49,43 +49,38 @@ brew remove froglet
 More examples on https://github.com/vorachet/froglet-examples
 
 ```
-
 $ git clone https://github.com/vorachet/froglet-examples
 $ cd froglet-examples
-$ cd graphml
-$ froglet
+$ cd graphml2dot
+$ froglet 
 
+  FROGLET_MODELS_FOLDER = /Users/vorachet/Desktop/froglet-examples/graphml2dot/models
+  FROGLET_TEMPLATES_FOLDER = /Users/vorachet/Desktop/froglet-examples/graphml2dot/templates
+  FROGLET_OUTPUT_FOLDER = /Users/vorachet/Desktop/froglet-examples/graphml2dot/output
 
-  FROGLET_MODELS_FOLDER = <MyProject>/froglet-examples/graphml/models
-  FROGLET_GENERATORS_FOLDER = <MyProject>/froglet-examples/graphml/generators
-  FROGLET_OUTPUT_FOLDER = <MyProject>/froglet-examples/graphml/output
-
-✔  Found GSL at /usr/local/bin/gsl
-✔  Found Generator Index File at <MyProject>/froglet-examples/graphml/generators/index.gsl
+✔ Found GSL at /usr/local/bin/gsl
+✔ Found templates directory at 
+✔ Found models directory at /Users/vorachet/Desktop/froglet-examples/graphml2dot/models
 
 Choose generator:
-1) graph.gsl
-2) index.gsl
-#? 2
-
-Choose model:
-1) graphml_model1.xml
+1) graphml2dot.gsl
 #? 1
 
+Choose model:
+1) graphml_10_nodes.xml
+2) graphml_2_nodes.xml
+#? 2
 
-
-
-✔  Target Generator <MyProject>/froglet-examples/graphml/generators/index.gsl
-✔  Target Model <MyProject>/froglet-examples/graphml/models/graphml_model1.xml
-✔  Target Output Folder <MyProject>/froglet-examples/graphml/output
-
+✔  Target Generator /Users/vorachet/Desktop/froglet-examples/graphml2dot/templates/graphml2dot.gsl
+✔  Target Model /Users/vorachet/Desktop/froglet-examples/graphml2dot/models/graphml_2_nodes.xml
+✔  Target Output Folder /Users/vorachet/Desktop/froglet-examples/graphml2dot/output
 
 Generating...
 
-gsl/4 M: Generated <MyProject>/froglet-examples/graphml/output/graphml_model1.dot
+gsl/4 M: Generated /Users/vorachet/Desktop/froglet-examples/graphml2dot/output/graphml_2_nodes.dot
 
 ✔  Done
 
-Enjoy using Froglet! 
+Enjoy using Froglet v0.4!
 
 ```
