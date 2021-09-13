@@ -18,7 +18,7 @@ The advantage of Froglet
 │   ├── models/*.xml      # GSL XML-based model files
 ```
 2. Run ```froglet``` at the root of ```<UserProject>``` directory
-3. Each program run, ```froglet``` asks user to select one template file (.gsl) and one model file (.xml) from the list
+3. Each program run, ```froglet``` asks user to select one template file (.gsl) and one model file (.xml) from an interactive list
 
 
 # Installation 
@@ -45,6 +45,8 @@ brew remove froglet
 ```
 
 # Usage example
+
+More examples on https://github.com/vorachet/froglet-examples
 
 ```
 
