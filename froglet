@@ -1,6 +1,7 @@
 #!/bin/bash
 # Vorachet Jaroensawas 
 
+VERSION=v0.3
 FROGLET_MODELS_FOLDER=$(pwd)/models
 FROGLET_GENERATORS_FOLDER=$(pwd)/generators
 FROGLET_OUTPUT_FOLDER=$(pwd)/output
@@ -74,4 +75,4 @@ gsl -a -p -q -script:index ${FROGLET_MODELS_FOLDER}/$model ${FROGLET_OUTPUT_FOLD
 echo -e ""
 echo -e "\xE2\x9C\x94  Done"
 echo -e ""
-echo -e "Enjoy using Froglet! "
+echo -e "Enjoy using Froglet ${VERSION}! "
